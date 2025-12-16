@@ -1,10 +1,12 @@
 # bundle-sheriff · Stop shipping bloat.
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![npm](https://img.shields.io/npm/v/bundle-sheriff.svg)
+[![npm](https://img.shields.io/npm/v/@berkinduz/bundle-sheriff?logo=npm&color=cb3837)](https://www.npmjs.com/package/@berkinduz/bundle-sheriff)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?logo=typescript)
 
 `bundle-sheriff` is a zero-config-needed CLI that keeps your bundles lean. It scans your built JS/CSS, measures Raw/Gzip/Brotli sizes, and fails CI when budgets are exceeded—preventing regressions before they hit production.
+
+Get it on npm: https://www.npmjs.com/package/@berkinduz/bundle-sheriff
 
 ## Why bundle-sheriff?
 
@@ -22,7 +24,7 @@
 ## Installation
 
 ```bash
-npm install -D bundle-sheriff
+npm install -D @berkinduz/bundle-sheriff
 ```
 
 ## Usage
@@ -30,7 +32,7 @@ npm install -D bundle-sheriff
 Run directly (no global install required):
 
 ```bash
-npx bundle-sheriff check
+npx @berkinduz/bundle-sheriff check
 ```
 
 What you’ll see (example):
