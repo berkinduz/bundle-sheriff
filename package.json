@@ -1,0 +1,62 @@
+{
+  "name": "@berkinduz/bundle-sheriff",
+  "version": "0.0.1",
+  "description": "Analyze build artifacts (JS/CSS), calculate sizes (Raw, Gzip, Brotli), and enforce performance budgets.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Berkin Duz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/berkinduz/bundle-sheriff.git"
+  },
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "bundle",
+    "size",
+    "gzip",
+    "brotli",
+    "budget",
+    "ci",
+    "cli"
+  ],
+  "bin": {
+    "bundle-sheriff": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/index.js",
+    "check": "node dist/index.js check",
+    "postbuild": "chmod +x dist/index.js || true",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "brotli-size": "4.0.0",
+    "bytes": "3.1.2",
+    "cac": "6.7.14",
+    "cli-table3": "0.6.5",
+    "fast-glob": "3.3.3",
+    "gzip-size": "7.0.0",
+    "picocolors": "1.1.1",
+    "unconfig": "7.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "25.0.2",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3",
+    "vitest": "4.0.15"
+  }
+}
